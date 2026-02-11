@@ -1466,12 +1466,12 @@ void _rdpDialog(String id) async {
 
 Widget getOnline(double rightPadding, bool online) {
   return Tooltip(
-      message: translate(online ? 'Online' : 'Offline'),
+      message: translate('Online'),  // 항상 'Online' 메시지
       waitDuration: const Duration(seconds: 1),
       child: Padding(
           padding: EdgeInsets.fromLTRB(0, 4, rightPadding, 4),
           child: CircleAvatar(
-              radius: 3, backgroundColor: online ? Colors.green : kColorWarn)));
+              radius: 3, backgroundColor: Colors.green)));  // 항상 초록색
 }
 
 Widget build_more(BuildContext context, {bool invert = false}) {
